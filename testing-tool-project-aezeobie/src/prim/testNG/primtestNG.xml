@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name= "prim.testNG.NodeNetFactoryTest"/>
+      <class name="prim.testNG.NodeNetworkTest"/>
+      <class name="prim.testNG.PathTest"/>
+      <class name="prim.testNG.PrimTest"/>
+      <class name="prim.testNG.NodeTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
