@@ -9,18 +9,18 @@ import java.util.Scanner;
 
 public class MergeSort {
 
-	public static int numThreads;
+	//public static int numThreads;
 
     /* main method */
 
-    public static void main(String[] args) {
+    public MergeSort(int seed, int size, int numThreads) {
 
-    	Scanner sc = new Scanner(System.in);
+    	//Scanner sc = new Scanner(System.in);
         String usageMessage = "Arguments: numElements seed";
-        System.out.print("Enter seed, array size, and no. threads: ");
+        //System.out.print("Enter seed, array size, and no. threads: ");
 
         /* get number of threads from environment variable */
-        numThreads = 0;
+        //numThreads = 0;
        /* try {
             numThreads = ThreadUtility.getNumThreads();
         }
@@ -35,12 +35,12 @@ public class MergeSort {
             System.exit(1);
         }
          */
-        int n = 0;
-        int seed = 0;
+        /*//int n = 0;
+        //int seed = 0;
         try {
-        	seed = sc.nextInt();
-        	n = sc.nextInt();
-        	numThreads = sc.nextInt();
+        	//seed = sc.nextInt();
+        	//n = sc.nextInt();
+        	//numThreads = sc.nextInt();
             //n = Integer.parseInt(args[0]);
             //seed = Integer.parseInt(args[1]);
             //numThreads = Integer.parseInt(args[2]);
@@ -48,10 +48,10 @@ public class MergeSort {
         catch (NumberFormatException e) {
             System.err.println("Arguments must be integers");
             System.exit(1);
-        }
+        }*/
 
         /* generate data */
-        Integer[] ints = new Integer[n];
+        Integer[] ints = new Integer[size];
         Random randGen = new Random();
         for (int i = 0; i < ints.length; ++i) {
             ints[i] = new Integer(randGen.nextInt(seed));
@@ -67,7 +67,7 @@ public class MergeSort {
         long endTime = System.currentTimeMillis();
 
         /* print parameters */
-        System.out.println("Parallel mergesort of " + n + 
+        System.out.println("Parallel mergesort of " + size + 
                 " random integers (seed " + seed + ")" +
                 " with " + numThreads + " threads");
 
