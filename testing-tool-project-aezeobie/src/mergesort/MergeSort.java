@@ -8,11 +8,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MergeSort {
+	public Integer[] ints;
 
 	//public static int numThreads;
 
     /* main method */
 
+	//I changed the main method to a constructor that takes primitive parameters for testing purposes
     public MergeSort(int seed, int size, int numThreads) {
 
     	//Scanner sc = new Scanner(System.in);
@@ -51,7 +53,7 @@ public class MergeSort {
         }*/
 
         /* generate data */
-        Integer[] ints = new Integer[size];
+        ints = new Integer[size];
         Random randGen = new Random();
         for (int i = 0; i < ints.length; ++i) {
             ints[i] = new Integer(randGen.nextInt(seed));
@@ -107,7 +109,8 @@ public class MergeSort {
      *   sorts data[firstIndex..lastIndex] using numThreads threads
      *   and returns result (in a new array)
      */
-    private static Integer[] mergesort(Integer[] data, 
+    //I modified this method from private to public for testing purposes
+    public static Integer[] mergesort(Integer[] data, 
             int firstIndex, int lastIndex, int numThreads) 
     {
         if (firstIndex > lastIndex) {
